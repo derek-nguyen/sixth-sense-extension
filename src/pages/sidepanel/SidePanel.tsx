@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '@assets/img/logo.svg';
 import '@pages/sidepanel/SidePanel.css';
+import CurrentUrl from '@src/shared/components/CurrentUrl';
 import useStorage from '@src/shared/hooks/useStorage';
 import exampleThemeStorage from '@src/shared/storages/exampleThemeStorage';
 import withSuspense from '@src/shared/hoc/withSuspense';
@@ -16,6 +17,7 @@ const SidePanel = () => {
         backgroundColor: theme === 'light' ? '#fff' : '#000',
       }}>
       <header className="App-header" style={{ color: theme === 'light' ? '#000' : '#fff' }}>
+        <CurrentUrl />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/pages/sidepanel/SidePanel.tsx</code> and save to reload.

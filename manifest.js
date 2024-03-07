@@ -12,10 +12,10 @@ const manifest = {
    * if you want to support multiple languages, you can use the following reference
    * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization
    */
-  name: '__MSG_extensionName__',
+  name: 'Sixth Sense',
   version: packageJson.version,
-  description: '__MSG_extensionDescription__',
-  permissions: ['storage', 'sidePanel'],
+  description: 'Get the sixth sense with this extension',
+  permissions: ['storage', 'sidePanel', 'tabs'],
   side_panel: {
     default_path: 'src/pages/sidepanel/index.html',
   },
