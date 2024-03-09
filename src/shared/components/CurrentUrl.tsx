@@ -6,14 +6,17 @@ const CurrentURL = () => {
   useEffect(() => {
     if (chrome.tabs) {
       chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
-        const url = tabs[0].url;
-        setCurrentURL(url);
+        console.log('tabs', tabs);
+        const url = new URL(tabs[0].url);
+        const protocolAndHost = `${url.protocol}//${url.host}`;
+        setCurrentURL(protocolAndHost);
       });
     }
   }, []);
+
   return (
     <div>
-      <p>Current URL: {currentURL}</p>
+      <p>Main URL: {currentURL}</p>
     </div>
   );
 };
