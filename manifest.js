@@ -15,10 +15,7 @@ const manifest = {
   name: 'Sixth Sense',
   version: packageJson.version,
   description: 'Get the sixth sense with this extension',
-  permissions: ['storage', 'sidePanel', 'tabs'],
-  side_panel: {
-    default_path: 'src/pages/sidepanel/index.html',
-  },
+  permissions: ['storage', 'tabs'],
   options_page: 'src/pages/options/index.html',
   background: {
     service_worker: 'src/pages/background/index.js',
