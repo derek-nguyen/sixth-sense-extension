@@ -1,12 +1,14 @@
 import React from 'react';
 
-const CompanyInformation = () => {
+interface CompanyInformationProps {
+  currentURL: string;
+}
+
+const CompanyInformation: React.FC<CompanyInformationProps> = ({ currentURL }) => {
   return (
     <div>
       <h1>Company Information</h1>
-      <p>Company Name: ABC</p>
-      <p>Company Address: 123 Street, City, Country</p>
-      <p>Company Email:</p>
+      <p>Company URL: {currentURL}</p>
     </div>
   );
 };
