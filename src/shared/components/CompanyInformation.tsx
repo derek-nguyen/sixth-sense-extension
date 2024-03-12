@@ -4,14 +4,17 @@ interface CompanyInformationProps {
   currentURL: string;
 }
 
-const CompanyInformation: React.FC<CompanyInformationProps> = ({ currentURL }) => {
+const CompanyInformation: React.FC<CompanyInformationProps> = (props) => {
+  const { currentURL } = props;
+
   return (
     <div>
       <h1>Company Information</h1>
       <hr />
-      <p>Company URL: {currentURL}</p>
+      <p>URL: {currentURL}</p>
     </div>
   );
 };
 
 export default CompanyInformation;
+
