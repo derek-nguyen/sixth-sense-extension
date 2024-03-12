@@ -8,6 +8,7 @@ import withErrorBoundary from '@src/shared/hoc/withErrorBoundary';
 
 // import CurrentUrl from '@src/shared/components/CurrentUrl';
 import CompanyInformation from '@root/src/shared/components/CompanyInformation';
+import About from '@root/src/shared/components/About';
 
 const Popup = () => {
   const theme = useStorage(exampleThemeStorage);
@@ -44,6 +45,7 @@ const Popup = () => {
           style={{ color: theme === 'light' && '#0281dc', marginBottom: '10px' }}>
           Learn React!
         </a> */}
+        <About />
         <button
           style={{
             backgroundColor: theme === 'light' ? '#fff' : '#000',
