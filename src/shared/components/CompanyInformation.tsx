@@ -8,6 +8,7 @@ const CompanyInformation: React.FC<CompanyInformationProps> = ({ currentURL }) =
   return (
     <div>
       <h1>Company Information</h1>
+      <hr />
       <p>Company URL: {currentURL}</p>
     </div>
   );
