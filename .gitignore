@@ -11,6 +11,8 @@
 .DS_Store
 .env.local
 .idea
+__init__.py
+__pycache__/
 
 # compiled
 utils/reload/*.js
