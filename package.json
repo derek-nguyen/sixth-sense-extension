@@ -20,7 +20,8 @@
     "lint": "eslint src --ext .ts,.js,.tsx,.jsx",
     "lint:fix": "pnpm lint --fix",
     "prettier": "prettier . --write",
-    "dev-server": "cd app/ && uvicorn main:app --port 8000 --reload"
+    "dev-server": "cd app/ && uvicorn main:app --port 8080 --reload",
+    "prod-server": "cd app/ && uvicorn main:app --port 8080"
   },
   "type": "module",
   "dependencies": {

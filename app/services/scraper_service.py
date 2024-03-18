@@ -28,7 +28,6 @@ def extract_website_links(url: str) -> list:
         soup = BeautifulSoup(response.text, "html.parser")
         base_url = response.url
         links = [urljoin(base_url, link.get("href")) for link in soup.find_all("a")]
-        print(links)
         return links
     except ValidationError as e:
         print(e.json())
