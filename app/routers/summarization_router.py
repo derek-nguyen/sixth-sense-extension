@@ -1,10 +1,11 @@
+from typing import Union, Dict
 from fastapi import APIRouter
 from app.services import summarization_service, scraper_service
 
 router = APIRouter()
 
 @router.get("/text/{url:path}")
-async def scrape_website(url: str)-> str:
+async def scrape_website(url: str)-> Union[str,Dict[str,str]]:
     try:
         text_content = scraper_service.scrape_website_text_content(url)
         if text_content:
