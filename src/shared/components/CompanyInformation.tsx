@@ -6,7 +6,7 @@ interface CompanyInformationProps {
 
 const CompanyInformation: React.FC<CompanyInformationProps> = (props) => {
   const { currentURL } = props;
-
+  
   return (
     <div>
       <h1>Company Information</h1>

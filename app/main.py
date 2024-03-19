@@ -15,5 +15,5 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-app.include_router(summarization_router.router, prefix="/summarize")
+app.include_router(summarization_router.router, prefix="/api/summarize")
 
