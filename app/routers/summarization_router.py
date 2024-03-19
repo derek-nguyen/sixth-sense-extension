@@ -4,7 +4,7 @@ from app.services import summarization_service, scraper_service
 
 router = APIRouter()
 
-@router.get("/text/{url:path}")
+@router.get("/text")
 async def scrape_website(url: str)-> Union[str,Dict[str,str]]:
     try:
         text_content = scraper_service.scrape_website_text_content(url)
