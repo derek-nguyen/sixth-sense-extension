@@ -1,12 +1,8 @@
 {
-  "name": "chrome-extension-boilerplate-react-vite",
+  "name": "notion-job-tracker",
   "version": "0.0.1",
   "description": "Sixth Sense",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite.git"
-  },
   "scripts": {
     "build": "tsc --noEmit && vite build",
     "build:firefox": "tsc --noEmit && cross-env __FIREFOX__=true vite build",
@@ -19,9 +15,7 @@
     "test": "vitest",
     "lint": "eslint src --ext .ts,.js,.tsx,.jsx",
     "lint:fix": "pnpm lint --fix",
-    "prettier": "prettier . --write",
-    "dev-server": "cd app/ && uvicorn main:app --port 8080 --reload",
-    "prod-server": "cd app/ && uvicorn main:app --port 8080"
+    "prettier": "prettier . --write"
   },
   "type": "module",
   "dependencies": {
