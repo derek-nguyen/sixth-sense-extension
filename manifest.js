@@ -8,13 +8,9 @@ const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 const manifest = {
   manifest_version: 3,
   default_locale: 'en',
-  /**
-   * if you want to support multiple languages, you can use the following reference
-   * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization
-   */
-  name: 'Sixth Sense',
+  name: 'NotionJobTracker - Save and track your jobs in notion',
   version: packageJson.version,
-  description: 'Get the sixth sense with this extension',
+  description: 'Save a job listing and send to your notion database directly from your browser',
   permissions: ['storage', 'tabs'],
   options_page: 'src/pages/options/index.html',
   background: {
@@ -25,9 +21,6 @@ const manifest = {
     default_popup: 'src/pages/popup/index.html',
     default_icon: 'icon-34.png',
   },
-  // chrome_url_overrides: {
-  //   newtab: 'src/pages/newtab/index.html',
-  // },
   icons: {
     128: 'icon-128.png',
   },
